@@ -50,7 +50,6 @@ app.post('/todos', checksExistsUserAccount, (request, response) => {
   let { title, deadline } = request.body;
   const { user } = request;
   
-  deadline = deadline.replace(/-/g, '\/');
   const todo = {
     id: uuidv4(),
     title,
